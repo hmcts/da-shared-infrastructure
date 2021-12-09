@@ -1,3 +1,36 @@
+variable "application_type" {
+  default     = "web"
+  description = "Type of Application Insights (Web/Other)"
+}
+
+variable "subscription" {}
+
+variable "team_contact" {
+  default = "#da-tech-notifications"
+}
+
+variable "name" {
+  default = false
+}
+
+variable "asp_capacity" {
+  default = 2
+}
+
+variable "da_external_hostname" {}
+variable "da_external_cert_name" {}
+variable "da_external_cert_vault_uri" {}
+variable "legal_external_hostname" {}
+variable "legal_external_cert_name" {}
+variable "legal_external_cert_vault_uri" {}
+
+variable "ilbIp" {}
+
+variable "sku" {
+  default     = "standard"
+  description = "The Name of the SKU used for this Key Vault. Possible values are standard and premium."
+}
+
 
 variable "common_tags" {
   type = map(string)
