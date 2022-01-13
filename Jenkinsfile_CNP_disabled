@@ -2,6 +2,10 @@
 //noinspection GroovyUnusedAssignment
 @Library("Infrastructure") _
 
-withInfraPipeline("da") {
+def product = 'da'
+def branchesToSync = ['demo', 'perftest', 'ithc']
+
+withInfraPipeline(product) {
+  syncBranchesWithMaster(branchesToSync)
   enableSlackNotifications("#da-tech-notifications")
 }
